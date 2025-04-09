@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Kalkulačka.VN
 {
-    double dblCislo1, dblCislo2;
-    string strOperace;
+    
 
     public partial class Form1 : Form
     {
+        double dblCislo1, dblCislo2, dblVysledek;
+        string strOperace;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +25,17 @@ namespace Kalkulačka.VN
             strOperace = "";
             dblCislo1 = dblCislo2 = 0;
 
+        }
+
+        private void btRovno_Click(object sender, EventArgs e)
+        {
+            dblCislo2 = Convert.ToDouble(txtDisplay.Text);
+           
+            // je požadováno sčítání
+            if (strOperace == "+") 
+                dblVysledek=dblCislo1 + dblCislo2;
+            //vypsat na disply
+            txtDisplay.Text = dblVysledek.ToString(); 
         }
 
         private void btPlusClick(object sender, EventArgs e)

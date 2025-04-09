@@ -66,6 +66,7 @@
             this.btRovno.TabIndex = 2;
             this.btRovno.Text = "=";
             this.btRovno.UseVisualStyleBackColor = true;
+            this.btRovno.Click += new System.EventHandler(this.btRovno_Click);
             // 
             // Form1
             // 
